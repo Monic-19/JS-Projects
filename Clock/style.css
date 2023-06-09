@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;   
+    background-image: url("clock.png") ;
+    height: 600px;
+    width: 600px;
+    background-size: 100%;
+    left: 30%;
+    top: 12%;
+}
+
+#Hourhand, #Minhand, #Sechand{
+    position: absolute;
+    background: rgb(224, 0, 0);
+    transform-origin: bottom;
+}
+
+#Hourhand{
+    height: 24%;
+    width: 2%;
+    left: 49.5%;
+    top: 26.24%;
+    background: rgb(0, 0, 0);
+    z-index: 3;
+    
+}
+
+
+#Minhand{
+    height: 31%;
+    width: 2%;
+    left: 49.5%;
+    top: 19%;
+    background: rgb(0, 0, 0);
+    z-index: 2;
+}
+
+#Sechand{
+    height: 37%;
+    width: 2%;
+    left: 49.5%;
+    top: 13%;
+    background: rgb(224, 0, 0);
+    z-index: 1;
+}
