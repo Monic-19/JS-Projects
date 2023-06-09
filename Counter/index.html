@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    
+    <div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center gap-10 bg-gradient-to-r from-[#fffbd5] to-[#b20a2c]">
+        <div class="text-[#fffbd5] font-medium text-[40px] font-mullish">Increment and Decrement</div>
+            <div class="flex flex-row bg-white text-[25px]  text-[#344151] rounded-full gap-12 p-3 px-5">
+                <!-- -ve button  -->
+                <button onclick="decrement()"><i class="fa-solid fa-minus"></i></button>
+
+                <div class="counter font-bold font-mullish text-[#b20a2c]">0</div>
+
+                <!-- + button  -->
+                <button onclick="increment()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+      
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
