@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomm Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+    <div class="product">
+
+        
+        <div class="smallImg">
+            <img src="./images/img1.jpg" alt="" onclick="myFunction(this)">
+            <img src="./images/img2.jpeg" alt="" onclick="myFunction(this)">
+            <img src="./images/img3.jpeg" alt="" onclick="myFunction(this)">
+            <img src="./images/img4.jpeg" alt="" onclick="myFunction(this)">
+            <img src="./images/img5.jpeg" alt="" onclick="myFunction(this)">
+        </div>
+
+        <div class="bigImg">
+            <img id="BI" src="./images/img1.jpg" alt="" >
+        </div>
+
+        <div class="desc">
+            <div class="topLayer">
+             <h3>Image Description </h3>
+              <div class="stars">
+                <i class="fa fa-star-o" style="font-size:22px;color:gold;"></i>
+                <i class="fa fa-star-o" style="font-size:22px;color:gold;"></i>
+                <i class="fa fa-star-o" style="font-size:22px;color:gold;"></i>
+                <i class="fa fa-star-o" style="font-size:22px;color:gold;"></i>
+                <i class="fa fa-star-o" style="font-size:22px;color:gold;"></i>
+
+               </div>
+              <p class="price">Price : <span id="iprice">X</span> </p>
+              <p class="data">Tax included. Shipping calculated at checkout.</p>
+            </div>
+
+            <div class="size">
+                <p>SIZE </p>
+                <div class="sizeBtn">
+                    <button class="btns">26</button>
+                    <button class="btns">28</button>
+                    <button class="btns">30</button>
+                    <button class="btns">32</button>
+                    <button class="btns">34</button>
+                    <button class="btns">36</button>
+                    <button class="btns">38</button>
+                </div>
+            </div>
+
+            <button class="btn1">Add To Cart</button>
+
+            <button class="btn2">Buy It Now</button>
+        </div>
+
+    </div>
+
+    <script>
+        let bigImg= document.getElementById('BI');
+        let price=document.getElementById('iprice');
+
+        function myFunction(smallImg){
+            bigImg.src=smallImg.src;
+        }
+
+        price.innerText = Math.floor( Math.random() * 1000 ) + 1 + " $"; 
+        
+    </script>
+
+</body>
+</html>
