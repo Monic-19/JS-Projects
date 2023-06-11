@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blur{
+    filter: blur(8px);
+    height: 100%; 
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+    width: full;
+    height: 1000px;
+    display: flex;
+    flex-direction: col;
+    background-color: palegreen;
+    margin: auto;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+}
+
+.layer{
+    display: flex;
+    justify-content:space-between;
+    height: 500px;
+    width: 800px;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.card{
+    background:transparent;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    width: 33%;
+    padding: 9px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 220px;
+    border: 2px solid black;
+    border-radius: 20px;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.card h3{
+    text-align: center;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    font-style:normal;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.card p{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 9px;
+    color: white;
+    text-shadow: 0px 3px 5px black;
+
+}
+
+
+.ucontain, .icontain ,.ccontain{
+    background-image: url("clock.png") ;
+    height: 200px;
+    width: 200px;
+    background-size: 100%;
+    margin-bottom: -20px;
+    position: relative;
+    left: 5px;
+}
+
+.Hourhand, .Minhand, .Sechand{
+    position: absolute;
+    background: rgb(224, 0, 0);
+    transform-origin: bottom;
+}
+
+ .Hourhand{
+    height: 22%;
+    width: 2%;
+    left: 49%;
+    top: 28.24%;
+    background: rgb(0, 0, 0);
+    z-index: 3; 
+} 
+
+
+.Minhand{
+    height: 29%;
+    width: 2%;
+    left: 49%;
+    top: 21%;
+    background: rgb(0, 0, 0);
+    z-index: 2;
+}
+
+
+.Sechand{
+    height: 35%;
+    width: 2%;
+    left: 49%;
+    top: 15%;
+    background: rgb(224, 0, 0);
+    z-index: 1;
+} 
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+.btn button{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 32px;
+    border: 2px solid black;
+    font-weight: bolder;
+    margin-top: -2px;
+}
+
+.ucontain{
+    display: none;
+}
+
+.icontain{
+    display: none;
+}
+
+.ccontain{
+    display: none;
+}
