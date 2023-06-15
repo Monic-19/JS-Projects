@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Tilt+Prism&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <img src="moon-icon.svg" alt="" class="mode1" id="night" onclick="night()">
+        <img src="sun-icon.svg" alt="" class="mode2" id="day" onclick="day()">
+        <h3 class="containerh3">Jokes</h3>
+        <img src="laughing-emoji-svgrepo-com.svg" alt="" height="320px" class="smili">
+        <p id="joke"></p>
+        <button class="button" id="btn" onclick="getJoke()">Get Joke</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
