@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter user" id="input">
+    <button id="btn">Submit</button>
+
+    <script>
+
+        let btn = document.getElementById("btn");
+        let input = "";
+
+        btn.addEventListener("click", () => {
+            input = document.getElementById("input");
+            if (input === "") {
+                alert("enter something");
+            }
+            else {
+                console.log(input.value);
+                fetchUser(input.value);
+            }
+        });
+
+        async function fetchUser(text) {
+            let url = `https://api.github.com/users/${text}`;
+            console.log(url);
+
+            let response = await fetch(url);
+
+            if (response.status == 404) {
+                alert('no data found');
+            }
+
+            else {
+
+                let data = await response.json();
+                console.log(response);
+                console.log(data);
+
+                console.log(data.avatar_url);
+                console.log(data.name);
+                console.log(data.html_url);
+                console.log(data.created_at);
+
+                console.log(data.bio);
+
+                console.log(data.public_repos);
+                console.log(data.followers);
+                console.log(data.following);
+
+                console.log(data.location);
+                console.log(data.blog);
+                console.log(data.twitter_username);
+                console.log(data.company);
+
+                let date = data.created_at.split("T");
+                 let date2 = date[0].split("-");
+                 let year = date2[0];
+                 let month = date2[1];
+                 let day = date2[2];
+
+                 console.log(date);
+                 console.log(date2);
+                 console.log(year);
+                 console.log(month);
+                 console.log(day);
+
+            }
+
+        }
+
+
+
+
+    </script>
+
+    <!-- <script>
+
+let noResult = document.getElementById('nsr');
+let btn2 = document.getElementById("btn");
+let name = document.getElementById('name');
+let nameLink = document.getElementById('nameLink');
+let joinDate = document.getElementById('joinDate');
+let bio = document.getElementById('bio');
+let repos = document.getElementById('repos');
+let followers = document.getElementById('followers');
+let following = document.getElementById('following');
+let location = document.getElementById('location');
+let website = document.getElementById('website');
+let twitter = document.getElementById('twitter');
+let company = document.getElementById('company');
+
+btn2.addEventListener("click", () => {
+    input = document.getElementById("input");
+    if (input === "") {
+        alert("enter something");
+    }
+    else {
+        console.log(input.value);
+        fetchUser(input.value);
+    }
+});
+
+async function fetchUser(text) {
+
+    let url = `https://api.github.com/users/${text}`;
+    console.log(url);
+
+    let response = await fetch(url);
+
+    if (response.status == 404) {
+        alert('no data found');
+    }
+
+    else {
+
+        let data = await response.json();
+        console.log(response);
+        console.log(data);
+
+        console.log(data.avatar_url);
+        console.log(data.name);
+        console.log(data.html_url);
+        console.log(data.created_at);
+
+        console.log(data.bio);
+
+        console.log(data.public_repos);
+        console.log(data.followers);
+        console.log(data.following);
+
+        console.log(data.location);
+        console.log(data.blog);
+        console.log(data.twitter_username);
+        console.log(data.company);
+    }
+
+}
+    </script> -->
+
+</body>
+
+</html>
