@@ -71,3 +71,9 @@
 
 </p>
 
+## (13) Bubble Game
+<p align ="center">
+<img width="1440" alt="Screenshot 2023-08-15 at 11 00 50 PM" src="https://github.com/Monic-19/JS-Projects/assets/118365854/a0a33265-d2fe-4007-8e69-714520e27d07">
+
+</p>
+
